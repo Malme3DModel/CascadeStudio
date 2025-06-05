@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+.topnav {
+  background-color: #111;
+  overflow: hidden;
+}
+
+.topnav a, .topnav label {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 4px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Consolas;
+}
+
+.topnav a:hover, .topnav label:hover {
+  background-color: #aaa;
+  color: black;
+}
+
+.topnav a.active, label.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.centered {
+  position: fixed; 
+  top: 10%; 
+  left: 25%; 
+  z-index: 1000;
+  width: 50%; 
+  height: 80%;
+  background: rgb(19, 19, 19); 
+  color: white;
+  overflow: auto;
+}
+
+:root {
+  --tp-font-family: Arial, sans-serif;
+  --tp-base-background-color: #2e2e2e;
+  --tp-button-background-color: hsl(0, 0%, 25%);
+  --tp-button-background-color-active: hsl(0, 0%, 40%);
+  --tp-button-background-color-focus: hsl(0, 0%, 35%);
+  --tp-button-background-color-hover: hsl(0, 0%, 30%);
+  --tp-button-foreground-color: #eeeeee;
+  --tp-label-foreground-color: #aeb5b8;
+}
+
+.gui-panel {
+  position: absolute;
+  right: 0;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.gui-panel::-webkit-scrollbar {
+  width: 10px;
+  background: var(--tp-base-background-color);
+}
+
+.gui-panel::-webkit-scrollbar-thumb {
+  background: #777;
+}
+
+.tp-rotv {
+  text-shadow: 1px 1px #000;
+}
+
+.tp-rotv button {
+  text-shadow: inherit;
+}
+
+.mosaic-root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.mosaic-window {
+  background-color: #222;
+}
+
+.mosaic-window-title {
+  background-color: #333;
+  color: white;
+  font-family: Consolas;
+}
+
+.console-container {
+  background-color: #1e1e1e;
+  color: white;
+  font-family: monospace;
+  padding: 8px;
+  height: 100%;
+  overflow-y: auto;
+  box-shadow: inset 0px 0px 3px rgba(0,0,0,0.75);
+}
+
+.console-line {
+  font-family: monospace;
+  font-size: 1.2em;
+  margin: 2px 0;
+}
+
+.console-line.error {
+  color: red;
+}
+
+.console-line.log {
+  color: white;
+}
+
+.console-line.log:nth-child(odd) {
+  color: lightgray;
+}
